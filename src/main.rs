@@ -30,7 +30,8 @@ fn main() {
         16,
     )
     .unwrap();
-    let rgb_blue = u8::from_str_radix(
+
+    let rgb_green = u8::from_str_radix(
         &colors_re
             .captures(&&user_color)
             .unwrap()
@@ -40,7 +41,7 @@ fn main() {
         16,
     )
     .unwrap();
-    let rgb_green = u8::from_str_radix(
+    let rgb_blue = u8::from_str_radix(
         &colors_re
             .captures(&&user_color)
             .unwrap()
@@ -51,12 +52,12 @@ fn main() {
     )
     .unwrap();
 
-    let color_tup = (rgb_red, rgb_blue, rgb_green);
+    let color_tup = (rgb_red, rgb_green, rgb_blue);
 
     let strings: &[ANSIString<'static>] = &[
         Style::new().bold().paint("Your color is:\n"),
         RGB(color_tup.0, color_tup.1, color_tup.2)
-            .paint(format!("#{:02x}{:02x}{:02x}", rgb_red, rgb_blue, rgb_green)),
+            .paint(format!("#{:02x}{:02x}{:02x}", rgb_red, rgb_green, rgb_blue)),
     ];
 
     println!("{}", ANSIStrings(strings));
