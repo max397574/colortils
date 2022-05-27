@@ -132,7 +132,7 @@ fn main() {
     }
 
     let light_strings: &[ANSIString<'static>] = &[
-        Style::new().bold().paint("Your color lightened up is:\n"),
+        Style::new().bold().paint("Your adjusted color up is:\n"),
         RGB(new_colors.0, new_colors.1, new_colors.2).paint(format!(
             "#{:02x}{:02x}{:02x}",
             new_colors.0, new_colors.1, new_colors.2
