@@ -1,4 +1,4 @@
-pub fn darken_color(color: &(u8, u8, u8), amount: u8) -> (u8, u8, u8) {
+pub fn darken_amount(color: &(u8, u8, u8), amount: u8) -> (u8, u8, u8) {
     let new_red: u8;
     let new_green: u8;
     let new_blue: u8;
@@ -20,7 +20,7 @@ pub fn darken_color(color: &(u8, u8, u8), amount: u8) -> (u8, u8, u8) {
     (new_red, new_green, new_blue)
 }
 
-pub fn lighten_color(color: &(u8, u8, u8), amount: u8) -> (u8, u8, u8) {
+pub fn lighten_amount(color: &(u8, u8, u8), amount: u8) -> (u8, u8, u8) {
     let new_red: u8;
     let new_green: u8;
     let new_blue: u8;
